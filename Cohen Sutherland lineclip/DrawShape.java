@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Cohenlineclip;
 
 import javax.media.opengl.GL2;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
-
-
 
 public class DrawShape implements GLEventListener {
     private GLU glu;
@@ -31,13 +24,10 @@ public class DrawShape implements GLEventListener {
     public void display(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
-
         int x_max = 300;
         int x_min = -300;
         int y_max = 210;
         int y_min = -200;
-
-
 
         Mid_Point_Line_Draw lineDraw = new Mid_Point_Line_Draw();
 
@@ -51,14 +41,7 @@ public class DrawShape implements GLEventListener {
         lc.cohen_sutherland(gl,0,300,-400,0);
         lc.cohen_sutherland(gl,-400,0,0,-300);
         lc.cohen_sutherland(gl,0,-300,400,0);
-
-
-
-
-
-
     }
-
 
     @Override
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
@@ -72,9 +55,5 @@ public class DrawShape implements GLEventListener {
     public void dispose(GLAutoDrawable arg0) {
         //do nothing
     }
-
-
-    
-
 }
 

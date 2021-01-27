@@ -1,10 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 import javax.media.opengl.GL2;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
@@ -35,19 +28,15 @@ public class MidPointCircle implements GLEventListener {
         gl.glLoadIdentity();
         glu.gluOrtho2D(-500, 500, -500, 500);
     }
-
     /**
      * Take care of drawing here.
-     *
      * @param drawable
      */
     @Override
     public void display(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
-
         DrawCircle(gl, 50, 50, 400);
-        
     }
 
     @Override
@@ -77,7 +66,8 @@ public class MidPointCircle implements GLEventListener {
             if (d < 0) {
                 d = d + ((2 * y + 3) * 4);
                 y++;
-            } else {
+            } 
+            else {
                 d += ((-2 * x + 2 * y + 5) * 4);
                 x--;
                 y++;

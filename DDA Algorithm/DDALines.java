@@ -1,21 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import javax.media.opengl.GL2;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLEventListener;
 import javax.media.opengl.glu.GLU;
 
 /**
- *
  * @author nazmus.sabab
  */
 public class DDALines implements GLEventListener {
@@ -23,7 +11,6 @@ public class DDALines implements GLEventListener {
      * Interface to the GLU library.
      */
     private GLU glu;
-
     /**
      * Take care of initialization here.
      * @param gld
@@ -39,7 +26,6 @@ public class DDALines implements GLEventListener {
         gl.glLoadIdentity();
         glu.gluOrtho2D(-250.0, 250.0, -150.0, 150.0);
     }
-
     /**
      * Take care of drawing here.
      * @param drawable
@@ -49,9 +35,6 @@ public class DDALines implements GLEventListener {
         GL2 gl = drawable.getGL().getGL2();
 
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
-        /*
-         * put your code here
-         */
         DDA(gl, 10, 20, 100, 40);
         DDA(gl, 100, 40, 10, 20);
         gl.glEnd();
@@ -61,15 +44,10 @@ public class DDALines implements GLEventListener {
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
         //do nothing
     }
-
     public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged) {
         //do nothing
     }
-
     private void DDA(GL2 gl, int x1, int y1, int x2, int y2) {
-        //write your own code
-
-        // ASSIGNMENT STARTS HERE
 
         gl.glPointSize(1.0f);
         gl.glColor3d(1, 0, 0);
@@ -98,8 +76,6 @@ public class DDALines implements GLEventListener {
             x += dX;
             y += dY;
         }
-
-        // ASSIGNMENT ENDS HERE
     }
 
     public void dispose(GLAutoDrawable arg0) {
