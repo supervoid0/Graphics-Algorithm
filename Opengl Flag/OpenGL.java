@@ -29,5 +29,3 @@ public class OpenGL {
       frame.setVisible(true);  
    }
 }
-
-
